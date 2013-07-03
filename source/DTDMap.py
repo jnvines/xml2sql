@@ -14,7 +14,7 @@ if args.verbose:
     	print(" and writing to " + args.output_file + "...")
     else:
     	print("...")
-else:
-    print("nope")
+    	
+
     
     
