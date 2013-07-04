@@ -15,6 +15,20 @@ if args.verbose:
     else:
     	print("...")
     	
-
-    
+def build_list(filein):
+	#"Reads in file and returns a list of lists (1:1 mapping from the DTD)"
+	 #f = open(filein)	
+	 with open(filein) as f:
+	 	for line in f:
+	 		line = line.rstrip()
+	 		if(line.startswith("<!ATTLIST")):
+	 			line = line.lstrip("<!ATTLIST").lstrip();
+	 			print("Attribute: " + line)
+	 		elif(line.startswith("<!ELEMENT")):
+	 			line = line.lstrip("<!ELEMENT").lstrip();
+	 			print("Element: " + line)
+	 return
+	 		
+build_list(args.input_file)
+	
     
